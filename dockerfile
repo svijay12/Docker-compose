@@ -37,7 +37,7 @@ COPY --from=builder /usr/local/sbin/postsrsd /usr/local/sbin/postsrsd
 
 RUN mkdir -p /etc/postsrsd /usr/local/var/lib/postsrsd
 
-COPY postsrsd.conf /etc/postsrsd/postsrsd.conf
+COPY postSRSd.conf /etc/postsrsd/postsrsd.conf
 
 EXPOSE 10003
 
