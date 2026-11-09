@@ -1,1 +1,11 @@
+services:
+  postsrsd:
+    build: .
+    container_name: postsrsd
+    restart: unless-stopped
 
+    ports:
+      - "127.0.0.1:10003:10003"
+
+    volumes:
+      - ./config/postsrsd.secret:/etc/postsrsd/postsrsd.secret:ro
